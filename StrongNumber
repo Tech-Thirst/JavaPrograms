@@ -1,0 +1,44 @@
+package firstweekassignment;
+
+import java.util.Scanner;
+
+public class Strong {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int number, temp, r, sum = 0, i, fact;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print(" Please Enter any number : ");
+		number = sc.nextInt();		
+		
+		temp = number;
+		while( temp > 0)
+		{
+			fact = 1; 
+			i = 1; 
+		    r = temp % 10;
+		    
+		    //Factorial of Each Number
+		    while (i <= r)
+		    {
+		     	fact = fact * i;
+		     	i++;
+		    }
+		    
+		    //Sum of the Factorial
+		     sum = sum + fact;
+		     temp = temp /10;
+		}
+		
+		if ( number == sum )
+		{
+			System.out.println("\n " + number + " is a Strong number");
+		}
+		else
+		{
+		   System.out.println("\n " + number + " is Not a Strong number");
+		}
+	}
+}

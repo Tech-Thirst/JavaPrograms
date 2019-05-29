@@ -1,0 +1,34 @@
+package firstweekassignment;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class ArmstrongNumber {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		int c, arm=0, number, temp;
+		
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("Enter a number");
+		number = Integer.parseInt(in.readLine());
+		temp = number;
+		
+		while(number != 0)
+		{
+			c = number%10;
+			arm = arm+(c*c*c);
+			number = number/10;
+		}
+		
+		if(arm == temp)
+			System.out.println(temp+" is a armstrong number ");
+		else
+			System.out.println(temp+" is not a armstrong number ");
+	}
+
+}
+

@@ -20,7 +20,7 @@ public class ArmstrongNumber {
 		while(number != 0)
 		{
 			c = number%10;
-			arm = arm+(c*c*c);
+			arm = arm + (c*c*c);
 			number = number/10;
 		}
 		
